@@ -1,0 +1,52 @@
+% This is the actual main file of the REPORT (thesis) being
+% written. It calls upon other files like the header, footer, as well
+% as each of the individual chapters.  The structure is pretty
+% straightforward.
+% 
+% The location of each of the files: - docsettings/header.tex:
+% contains all the document info, the pakages used and macros defined.
+% - docsettings/titlepage.tex: Contains the title page of the
+% document, in case a specific one is required.  -
+% docsettings/prologue.tex: Contains statements, acknowledgements,
+% etc...  that would go before the actual contents.  -
+% chapters/intro.tex: Introductory chapter.  - chapters/chaptX.tex:
+% Chapter X in the document.  - chapters/conclusion.tex: Final
+% chapter.  - chapters/appY.tex: Appendix number Y of the document.
+%
+% It is advisable to place all the images within the ./pics folder,
+% which is already preselected to hold the images.
+%
+% 
+
+\input{docsettings/header}
+\begin{document}
+%\nocite{*}
+%---------------------------------
+%for 1.2 sptacing:
+%\renewcommand{\baselinestretch}{1.20}\normalsize
+%---------------------------------
+\maketitle
+\begin{abstract}
+  This work presents the process of generating synthetic images of
+  ellipses from the parametric ellipse equations into a binary
+  image. The synthetic images of single ellipses are created in order
+  to produce an image of two (or more) overlapping ellipses in which
+  the distance between the centers and the angle between the major
+  axes is known. These synthetic images of overlapping objects will
+  then be used as a basic test dataset for an algorithm that finds
+  points of intersection of two (or more) boundaries.  
+\end{abstract}
+%--- OPTIONAL ------------------------------
+%\tableofcontents
+%\listoffigures
+%\listoftables
+%---------------------------------
+
+%---------------------------------
+\input{sections/intro}
+%---------------------------------
+\input{sections/chapt2}
+%---------------------------------
+\input{sections/conclusion}
+%---------------------------------
+\input{docsettings/footer} 
